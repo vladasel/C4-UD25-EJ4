@@ -35,13 +35,8 @@ public class SalaController {
 	@GetMapping("/salas/{id}")
 	public Sala salaXID(@PathVariable(name = "id") Long id) {
 
-		Sala sala_xid = new Sala();
 
-		sala_xid = salaServiceImpl.salaXID(id);
-
-		System.out.println("Sala XID: " + sala_xid);
-
-		return sala_xid;
+		return salaServiceImpl.salaXID(id);
 	}
 
 	@PutMapping("/salas/{id}")

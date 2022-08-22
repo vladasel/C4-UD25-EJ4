@@ -21,7 +21,7 @@ public class PeliculaController {
 	@Autowired
 	PeliculaServiceImpl peliculaServiceImpl;
 
-	@GetMapping("/pelicuals")
+	@GetMapping("/peliculas")
 	public List<Pelicula> listarPeliculas() {
 		return peliculaServiceImpl.listarPeliculas();
 	}

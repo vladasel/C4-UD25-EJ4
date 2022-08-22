@@ -26,14 +26,14 @@ public class Pelicula {
 
 	@JsonIgnore
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "pelicula")
-	private List<Sala> sala;
+	private List<Sala> salas;
 
 	
-	public Pelicula(Long id, String nombre, int calificacion_edad, List<Sala> sala) {
+	public Pelicula(Long id, String nombre, int calificacion_edad, List<Sala> salas) {
 		this.id = id;
 		this.nombre = nombre;
 		this.calificacion_edad = calificacion_edad;
-		this.sala = sala;
+		this.salas = salas;
 	}
 
 	public Pelicula(Long id, String nombre, int calificacion_edad) {
@@ -70,17 +70,17 @@ public class Pelicula {
 	@JsonIgnore
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Sala")
 	public List<Sala> getSala() {
-		return sala;
+		return salas;
 	}
 
 	public void setSala(List<Sala> sala) {
-		this.sala = sala;
+		this.salas = sala;
 	}
 
 	@Override
 	public String toString() {
 		return "Pelicula [id=" + id + ", nombre=" + nombre + ", calificacion_edad=" + calificacion_edad + ", sala="
-				+ sala + "]";
+				+ salas + "]";
 	}
 
 	
